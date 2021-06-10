@@ -2,12 +2,7 @@
 tkinter
 """
 import tkinter as tk
-import win32gui, win32api
-import os, sys
-import win32con
-import pywintypes
-import threading
-import time
+import win32gui
 
 
 class FloatingWindow(tk.Tk):
