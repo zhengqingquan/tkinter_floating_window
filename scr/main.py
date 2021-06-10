@@ -1,7 +1,7 @@
 """
 main
 """
-from floatingwindow import *
+from scr.floatingwindow import *
 
 
 def main():
