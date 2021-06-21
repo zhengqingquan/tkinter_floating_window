@@ -7,6 +7,9 @@ import win32gui
 
 
 class FloatingWindow(tk.Tk):
+    root_x, root_y, abs_x, abs_y = 0, 0, 0, 0
+    width, height = None, None
+
     def __init__(self):
         super().__init__()  # 先进行tk.Tk的初始化
         self.SysListView32_handle = 0  # 保存SysListView32窗口的句柄
@@ -52,9 +55,6 @@ class FloatingWindow(tk.Tk):
         用来初始化窗口的风格（样式）
         :return:None
         """
-        width = None
-        height = None
-        self.width, self.height = width, height
         self.maxsize(600, 400)  # 最大600x400
         self["bg"] = "gray"  # 背景设为灰色
         self.wm_attributes("-alpha", 0.4)  # 透明度。更改透明度必须放init_parent_window()后面，否则窗口会消失。
